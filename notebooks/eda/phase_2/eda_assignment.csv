@@ -1,0 +1,33 @@
+EDA Task,What to Check / Do,Why It Is Important,Related Statistical Tests / Methods,Related Objective(s),Person
+Dataset Shape Analysis,"Check number of rows, columns, time range, hourly coverage",Ensures dataset is sufficiently large and temporally complete for forecasting,None,Objective 1,Adarsha
+Data Type Validation,"Verify timestamp, numeric, and categorical datatypes",Prevents preprocessing and modeling errors caused by incorrect datatypes,None,Objective 1,Adarsha
+Timestamp Continuity Check,"Detect missing hours, irregular intervals, duplicate timestamps",Time-series forecasting requires continuous chronological ordering,"Datetime gap detection, frequency validation",Objective 1,Adarsha
+Duplicate Record Analysis,Identify duplicate rows and timestamps,Duplicate records can bias model learning and evaluation,Duplicate detection,Objective 1,Adarsha
+Missing Value Analysis,Measure missing percentage and missing patterns over time,Helps determine suitable imputation strategy and data reliability,Missing value percentage analysis,Objective 1,Adarsha
+Missing Pattern Visualization,Visualize missing blocks using heatmaps/missing matrix,Consecutive missing sequences can severely distort temporal models,Missingno matrix/heatmap,Objective 1,Adarsha
+Descriptive Statistics,"Compute mean, median, std, min, max, quartiles",Provides initial understanding of feature distributions and spread,"describe(), skewness, kurtosis",Objective 1,Adarsha
+Target Distribution Analysis (PM2.5),"Plot histogram, KDE, boxplot",PM2.5 is usually skewed with extreme spikes; distribution affects preprocessing and model choice,"Histogram, KDE plot, Shapiro-Wilk (optional)","Objectives 1, 2",Adarsha
+Outlier Detection,"Use IQR, Z-score, percentile analysis",Distinguishes real hazardous pollution events from sensor noise,"IQR, Z-score, Percentile analysis","Objectives 1, 2",Adarsha
+AQI Category Distribution,Convert PM2.5 into AQI classes and analyze frequency,Helps understand pollution severity and dataset imbalance,AQI categorization thresholds,"Objectives 3, 4",Adarsha
+Hourly Trend Analysis,Analyze average PM2.5 by hour of day,Detects traffic-related and daily pollution cycles,Groupby hour aggregation,"Objectives 1, 3",Adarsha
+Weekly Trend Analysis,Compare weekday vs weekend pollution,Reveals human activity impact on air quality,Weekday/weekend aggregation,"Objectives 3, 4",Adarsha
+Monthly/Seasonal Trend Analysis,Analyze monthly and seasonal variations,Kathmandu pollution strongly depends on season and inversion effects,"Seasonal decomposition, monthly aggregation","Objectives 3, 4",Adarsha
+Rolling Mean & Rolling Std Analysis,Compute moving averages and moving volatility,Helps identify local trends and instability periods,Rolling mean/std computation,"Objectives 1, 3",Adarsha
+Time-Series Decomposition,"Decompose into trend, seasonality, residuals",Determines temporal structure and forecasting complexity,STL decomposition / seasonal_decompose,"Objectives 1, 2",Adarsha
+Stationarity Testing (ADF/KPSS),Check whether PM2.5 series is stationary,Non-stationary data affects model performance and forecasting reliability,"ADF Test, KPSS Test","Objectives 1, 2",
+Pearson Correlation Analysis,Measure linear relationships between variables,Helps identify directly influential meteorological variables,Pearson correlation coefficient,"Objectives 2, 3",
+Spearman Correlation Analysis,Measure monotonic/non-linear relationships,Environmental data often contains non-linear dependencies,Spearman rank correlation,"Objectives 2, 3",
+Correlation Heatmap,Visualize feature relationships,Simplifies feature selection and dependency analysis,Correlation matrix heatmap,"Objectives 2, 3",
+Autocorrelation Function (ACF),Analyze temporal dependency of PM2.5 values,Determines significant lag periods for feature engineering,ACF plot,"Objectives 1, 3",
+Partial Autocorrelation (PACF),Identify direct lag relationships,Helps select optimal lag features without redundancy,PACF plot,"Objectives 1, 3",
+Lag Correlation Analysis,"Evaluate PM2.5(t−1), PM2.5(t−24), PM2.5(t−168), etc.","Captures hourly, daily, and weekly temporal dependencies",Lagged correlation analysis,"Objectives 1, 3",
+Cross-Correlation Analysis,Analyze delayed effects of weather variables on PM2.5,Identifies how meteorological factors influence pollution over time,Cross-correlation function (CCF),"Objectives 3, 4",
+Multicollinearity Analysis (VIF),Detect highly correlated predictors,Prevents unstable regression coefficients and improves interpretability,Variance Inflation Factor (VIF),"Objectives 2, 3",
+Temporal Feature Validation,Analyze hour/day/month/season feature distributions,Ensures engineered temporal features capture pollution cycles properly,Distribution plots by temporal feature,"Objectives 1, 3",
+Cyclical Encoding Validation,Validate sin/cos encoding for hour/month,Preserves periodic nature of temporal features,Sin/Cos cyclical transformation validation,"Objectives 1, 3",
+Lag Feature Distribution Analysis,Visualize generated lag feature behavior,Ensures lag features are meaningful and stable,Lag feature histogram/boxplot,"Objectives 1, 3",
+Train-Test Distribution Comparison,Compare train/test PM2.5 distributions,Detects distribution drift and ensures fair evaluation,"Kolmogorov-Smirnov Test, PSI (optional)",Objective 2,
+Baseline Forecast Analysis,Compare against naïve persistence model,Validates whether ML models outperform simple forecasting,Naïve persistence baseline comparison,Objective 2,
+Extreme Pollution Event Analysis,Investigate top pollution spikes and conditions,Provides real-world environmental insights and interpretability,Top percentile event analysis,"Objectives 3, 4",
+Feature Importance Pre-Analysis,Preliminary analysis of influential variables,Helps validate domain assumptions before modeling,Feature importance ranking,"Objectives 3, 4",
+SHAP/Explainability Readiness Analysis,Prepare interpretable feature relationships,Strengthens explainability and research significance,"SHAP values, Permutation importance","Objectives 3, 4",
