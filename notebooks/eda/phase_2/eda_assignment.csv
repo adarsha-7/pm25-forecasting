@@ -13,7 +13,7 @@ Hourly Trend Analysis,Analyze average PM2.5 by hour of day,Detects traffic-relat
 Weekly Trend Analysis,Compare weekday vs weekend pollution,Reveals human activity impact on air quality,Weekday/weekend aggregation,"Objectives 3, 4",Adarsha
 Monthly/Seasonal Trend Analysis,Analyze monthly and seasonal variations,Kathmandu pollution strongly depends on season and inversion effects,"Seasonal decomposition, monthly aggregation","Objectives 3, 4",Adarsha
 Rolling Mean & Rolling Std Analysis,Compute moving averages and moving volatility,Helps identify local trends and instability periods,Rolling mean/std computation,"Objectives 1, 3",Adarsha
-Time-Series Decomposition,"Decompose into trend, seasonality, residuals",Determines temporal structure and forecasting complexity,STL decomposition / seasonal_decompose,"Objectives 1, 2",Adarsha
+Time-Series Decomposition,"Decompose into trend, seasonality, residuals",Determines temporal structure and forecasting complexity,STL decomposition / seasonal_decompose,"Objectives 1, 2",
 Stationarity Testing (ADF/KPSS),Check whether PM2.5 series is stationary,Non-stationary data affects model performance and forecasting reliability,"ADF Test, KPSS Test","Objectives 1, 2",
 Pearson Correlation Analysis,Measure linear relationships between variables,Helps identify directly influential meteorological variables,Pearson correlation coefficient,"Objectives 2, 3",
 Spearman Correlation Analysis,Measure monotonic/non-linear relationships,Environmental data often contains non-linear dependencies,Spearman rank correlation,"Objectives 2, 3",
